@@ -78,28 +78,28 @@
 
         raise_layer {
 // -------------------------------------------------------------------------------
-// |  TAB |  &  |  é  |  #  | _~  | _^  |   | _`  |  è  |  à  |  ç  |  @  | BKSP |
-// | SHFT |     |     |     |     |  ^  |   |  `  |  %  |     |     |     |      |
+// |  TAB |  &  |  é  |  #  | _~  | _^  |   | _`  |  è  |  à  |  ç  |  %  | BKSP |
+// | SHFT |     |     |     |  `  |  ^  |   | LFT | DWN | UP  | RGT |     |      |
 // | CTRL |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     |  -  |   | RET |     | ALT |
             bindings = <
-    &trans  &kp N1  &kp N2  &kp RA(N3)  &kp RA(LBKT)  &kp LBKT         &kp RA(BSLH)  &kp N7        &kp N0  &kp N9  &kp RA(N0)  &trans
-    &trans  &trans  &trans  &trans      &trans        &kp RA(N9)       &kp RA(N7)    &kp LS(SEMI)  &trans  &trans  &trans      &trans
-    &trans  &trans  &trans  &trans      &trans        &trans           &trans        &trans        &trans  &trans  &trans      &trans
+    &trans  &kp N1  &kp N2  &kp RA(N3)  &kp RA(LBKT)  &kp LBKT         &kp RA(BSLH)  &kp N7    &kp N0  &kp N9     &kp LS(SEMI)  &trans
+    &trans  &trans  &trans  &trans      &kp RA(N7)    &kp RA(N9)       &kp LEFT      &kp DOWN  &kp UP  &kp RIGHT  &trans        &trans
+    &trans  &trans  &trans  &trans      &trans        &trans           &trans        &trans    &trans  &trans     &trans        &trans
                                        &trans  &trans  &kp N6           &kp RET  &trans   &trans
             >;
         };
 
         adjust_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |     | F1  | F2  | F3  | F10 |   |      | INS  | DEL  |     |     | BKSP |
-// | CAPS |     | F4  | F5  | F6  | F11 |   | HOME | PGDN | PGUP | END |     |      |
-// | CTRL |     | F7  | F8  | F9  | F12 |   |      |      |      |     |     |      |
+// ------------------------------------------------------------------------------------
+// |  TAB |     | F1  | F2  | F3  | F10 |   |      | INS  | DEL  |       |     | BKSP |
+// | CAPS |     | F4  | F5  | F6  | F11 |   | LEFT | DOWN |  UP  | RIGHT |     |      |
+// | CTRL |     | F7  | F8  | F9  | F12 |   | HOME | PGDN | PGUP |  END  |     |      |
 //                    | GUI |     | SPC |   | RET  |      | ALT  |
             bindings = <
-    &trans    &trans  &kp F1  &kp F2    &kp F3   &kp F10        &trans    &kp DEL    &kp INS    &trans   &trans  &kp BSPC
-    &kp CAPS  &trans  &kp F4  &kp F5    &kp F6   &kp F11        &kp HOME  &kp PG_DN  &kp PG_UP  &kp END  &trans  &trans
-    &trans    &trans  &kp F7  &kp F8    &kp F9   &kp F12        &trans    &trans     &trans     &trans   &trans  &trans
+    &trans    &trans  &kp F1  &kp F2    &kp F3   &kp F10        &trans    &kp DEL    &kp INS    &trans     &trans  &kp BSPC
+    &kp CAPS  &trans  &kp F4  &kp F5    &kp F6   &kp F11        &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans  &trans
+    &trans    &trans  &kp F7  &kp F8    &kp F9   &kp F12        &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans  &trans
                              &trans  &trans  &kp SPACE             &kp RET   &trans   &trans
             >;
         };
